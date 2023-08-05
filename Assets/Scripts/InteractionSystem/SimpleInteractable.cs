@@ -9,3 +9,4 @@ public class SimpleInteractable : Interactable
         OnInteracted?.Invoke();
     }
 }
+
