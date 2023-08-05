@@ -4,5 +4,26 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/_TestScenes.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Gleb.unity
+    guid: f3866921efefa9443949cd9706b2f7f1
+  - enabled: 1
+    path: Assets/Scenes/Katya.unity
+    guid: 94b06299913b14844a2ab24470d1d1f6
+  - enabled: 1
+    path: Assets/Scenes/Ksusha.unity
+    guid: b8a8eef9988ce6d4e98ff397b3372c24
+  - enabled: 1
+    path: Assets/Scenes/Marlen.unity
+    guid: 48e19160f2c1cf54b85eda2e05c17370
+  - enabled: 1
+    path: Assets/Scenes/Ura.unity
+    guid: 9be3c75fcd89305419bb0b4e370f980a
+  - enabled: 1
+    path: Assets/Scenes/Vova.unity
+    guid: 010cb6ab850cc394aa22d19da421fb10
   m_configObjects: {}
