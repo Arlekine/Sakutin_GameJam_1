@@ -7,6 +7,7 @@ public class Interactor : MonoBehaviour
     [SerializeField] private Camera _camera;
     [SerializeField] private KeyCode _interactionButton;
     [SerializeField] private bool _canInteractOnStart;
+    [SerializeField] private float _raycastDistance = 2f;
 
     private Interactable _selectedInteractable;
 
@@ -29,7 +30,7 @@ public class Interactor : MonoBehaviour
             var ray = _camera.ScreenPointToRay(screenCenter);
             RaycastHit hit;
 
-            if (Physics.Raycast(ray, out hit, 10000f))
+            if (Physics.Raycast(ray, out hit, _raycastDistance))
             {
                 var interactable = hit.collider.GetComponent<Interactable>();
                 if (interactable != null)
