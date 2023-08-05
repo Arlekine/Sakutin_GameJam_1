@@ -6,6 +6,11 @@ public class DeadTriger : MonoBehaviour
 {
     private void OnCollisionEnter(Collision other)
     {
-        //var player = other.collider.GetComponent<Hel>
+        var player = other.collider.GetComponent<HealthSystem>();
+
+        if(player != null)
+        {
+            player.TakeHit(player.maxHealth);
+        }
     }
 }

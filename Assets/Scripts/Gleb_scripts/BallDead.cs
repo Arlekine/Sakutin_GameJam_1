@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BallDead : MonoBehaviour
+public class BollDead : MonoBehaviour
 {
     public Rigidbody targetRigidbody;
 
