@@ -58,6 +58,8 @@ public class FirstPersonController : MonoBehaviour
     public bool playerCanMove = true;
     public float walkSpeed = 5f;
     public float maxVelocityChange = 10f;
+    public string forwardAxis = "Vertical";
+    public string sideAxis = "Horizontal";
 
     // Internal Variables
     private bool isWalking = false;
@@ -371,7 +373,7 @@ public class FirstPersonController : MonoBehaviour
         if (playerCanMove)
         {
             // Calculate how fast we should be moving
-            Vector3 targetVelocity = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+            Vector3 targetVelocity = new Vector3(Input.GetAxis(sideAxis), 0, Input.GetAxis(forwardAxis));
 
             // Checks if player is walking and isGrounded
             // Will allow head bob
@@ -618,6 +620,8 @@ public class FirstPersonController : MonoBehaviour
 
         GUI.enabled = fpc.playerCanMove;
         fpc.walkSpeed = EditorGUILayout.Slider(new GUIContent("Walk Speed", "Determines how fast the player will move while walking."), fpc.walkSpeed, .1f, fpc.sprintSpeed);
+        fpc.forwardAxis = EditorGUILayout.TextField("Forward Axis", fpc.forwardAxis);
+        fpc.sideAxis = EditorGUILayout.TextField("Side Axis", fpc.sideAxis);
         GUI.enabled = true;
 
         EditorGUILayout.Space();
