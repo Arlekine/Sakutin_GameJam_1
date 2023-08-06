@@ -7,7 +7,7 @@ public class Interactor : MonoBehaviour
     [SerializeField] private Camera _camera;
     [SerializeField] private KeyCode _interactionButton;
     [SerializeField] private bool _canInteractOnStart;
-    [SerializeField] private float _raycastDistance = 2f;
+    [SerializeField] private float _raycastDistance = 3f;
 
     private Interactable _selectedInteractable;
 
