@@ -4,9 +4,9 @@ public class Enemy : MonoBehaviour
 {
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.TryGetComponent<Player>(out Player player))
+        if(collision.gameObject.TryGetComponent<HealthSystem>(out HealthSystem player))
         {
-            player.TakeDamage(1);
+            player.TakeHit(player.maxHealth);
         }
 
     }

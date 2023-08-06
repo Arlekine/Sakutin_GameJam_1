@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class SceneRealoder : MonoBehaviour
 {
     public HealthSystem healthSystem;
+    public SceneProgress sceneProgress;
 
     private void OnEnable()
     {
@@ -17,6 +18,6 @@ public class SceneRealoder : MonoBehaviour
 
     private void ReloadScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        sceneProgress.ReloadScene();
     }
 }

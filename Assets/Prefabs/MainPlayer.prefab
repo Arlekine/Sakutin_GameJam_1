@@ -376,7 +376,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6717576989423882295
 RectTransform:
   m_ObjectHideFlags: 0
@@ -727,11 +727,13 @@ GameObject:
   m_Component:
   - component: {fileID: 6640241814151578194}
   - component: {fileID: 477931360972791917}
+  - component: {fileID: 6502882618986467424}
   - component: {fileID: 1010309845249013043}
   - component: {fileID: 481042354542593993}
   - component: {fileID: 3204231386162070504}
   - component: {fileID: 6958463377503206855}
   - component: {fileID: 1691389855905939800}
+  - component: {fileID: 6439403360141238888}
   m_Layer: 0
   m_Name: MainPlayer
   m_TagString: Player
@@ -763,6 +765,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7052507361966214072}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &6502882618986467424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7052507361966214072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 250ea7fd7bd0120449399bfa8d2d1f81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthSystem: {fileID: 6439403360141238888}
 --- !u!23 &1010309845249013043
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -885,6 +900,8 @@ MonoBehaviour:
   playerCanMove: 1
   walkSpeed: 5
   maxVelocityChange: 10
+  forwardAxis: Vertical
+  sideAxis: Horizontal
   enableSprint: 1
   unlimitedSprint: 1
   sprintKey: 304
@@ -927,6 +944,20 @@ MonoBehaviour:
   _interactionButton: 101
   _canInteractOnStart: 1
   _raycastDistance: 2
+--- !u!114 &6439403360141238888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7052507361966214072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85880ceab90f7a54ea41328e4aafc6e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startHealth: 3
+  maxHealth: 3
 --- !u!1 &7600853672815044764
 GameObject:
   m_ObjectHideFlags: 0
