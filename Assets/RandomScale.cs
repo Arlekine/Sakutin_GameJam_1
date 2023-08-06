@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class RandomScale : MonoBehaviour
 {
-    public float interval = 0.2f;
+    [SerializeField] private float interval = 0.2f;
     void Start()
     {
         InvokeRepeating(nameof(ChangeScale), 0f, interval);
